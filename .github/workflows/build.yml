@@ -14,9 +14,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: master.tex
+          root_file: cv.tex
           args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode -outdir=build"
-          post_compile: find build ! -name 'master.pdf' -type f -exec rm -f {} +
+          post_compile: find build ! -name 'cv.pdf' -type f -exec rm -f {} +
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
