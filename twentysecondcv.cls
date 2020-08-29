@@ -75,6 +75,7 @@
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand*{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
+\newcommand{\exams}[1]{\renewcommand{\exams}{#1}}
 \newcommand{\hardskill}[1]{\renewcommand{\hardskill}{#1}}
 \newcommand{\softskill}[1]{\renewcommand{\softskill}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
@@ -168,27 +169,34 @@
 
 		\profilesection{Skills}
 
-		%\skills
+		\skills
 		%\skillstext
 		%\scriptsize
 		%(*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
 		
-		\ifthenelse{\equal{\hardskill}{}}{}{
-			{\Large\color{black!80}HARD SKILLS}
-			\begin{flushleft}
-				\hardskill
-			\end{flushleft}
-		}
+%		\ifthenelse{\equal{\hardskill}{}}{}{
+%			{\Large\color{black!80}HARD SKILLS}
+%			\begin{flushleft}
+%				\hardskill
+%			\end{flushleft}
+%		}
 		
-		\ifthenelse{\equal{\softskill}{}}{}{
-			{\Large\color{black!80}SOFT SKILLS}
-			\begin{flushleft}
-				\softskill
-			\end{flushleft}
-		}
+%		\ifthenelse{\equal{\softskill}{}}{}{
+%			{\Large\color{black!80}SOFT SKILLS}
+%			\begin{flushleft}
+%				\softskill
+%			\end{flushleft}
+%		}
 			
 		%------------------------------------------------
-			
+		
+		\ifthenelse{\equal{\exams}{}}{}{
+			\profilesection{Relevant exams}
+			\begin{flushleft}
+				\exams
+			\end{flushleft}
+		}
+					
 	\end{textblock}
 }
 
@@ -277,6 +285,14 @@
 	}\\
 }
 
+
+%----------------------------------------------------------------------------------------
+%	 EXAM LIST
+%----------------------------------------------------------------------------------------
+
+\newcommand{\exam}[2]{%
+	\normalsize\textbf{#1:} \small#2\\
+}
 
 
 %----------------------------------------------------------------------------------------
