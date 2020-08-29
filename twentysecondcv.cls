@@ -100,6 +100,18 @@
 	}
 }
 
+\newcommand\languages[1]{ 
+	\renewcommand{\languages}{
+		\begin{tikzpicture}
+			\foreach [count=\i] \x/\y in {#1}{
+				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
+				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+				\node [above right] at (0,\i+0.4) {\x};
+			}
+		\end{tikzpicture}
+	}
+}
+
 % Command for printing skills text
 \newcommand\skillstext[1]{ 
 	\renewcommand{\skillstext}{
@@ -189,6 +201,8 @@
 %		}
 			
 		%------------------------------------------------
+		\profilesection{Languages}
+		\languages		
 		
 		\ifthenelse{\equal{\exams}{}}{}{
 			\profilesection{Relevant exams}
@@ -292,6 +306,11 @@
 
 \newcommand{\exam}[2]{%
 	\normalsize\textbf{#1:} \small#2\\
+}
+
+
+\newcommand{\onlytext}[1]{%
+	#1\vspace{6pt}
 }
 
 
