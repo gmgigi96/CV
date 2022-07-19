@@ -186,19 +186,19 @@
 		%\scriptsize
 		%(*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
 		
-%		\ifthenelse{\equal{\hardskill}{}}{}{
-%			{\Large\color{black!80}HARD SKILLS}
-%			\begin{flushleft}
-%				\hardskill
-%			\end{flushleft}
-%		}
+		\ifthenelse{\equal{\hardskill}{}}{}{
+			{\Large\color{black!80}HARD SKILLS}
+			\begin{flushleft}
+				\hardskill
+			\end{flushleft}
+		}
 		
-%		\ifthenelse{\equal{\softskill}{}}{}{
-%			{\Large\color{black!80}SOFT SKILLS}
-%			\begin{flushleft}
-%				\softskill
-%			\end{flushleft}
-%		}
+		\ifthenelse{\equal{\softskill}{}}{}{
+			{\Large\color{black!80}SOFT SKILLS}
+			\begin{flushleft}
+				\softskill
+			\end{flushleft}
+		}
 			
 		%------------------------------------------------
 		\profilesection{Languages}
