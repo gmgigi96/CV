@@ -280,7 +280,7 @@
 	}\\
 }
 
-\newcommand{\twentyitem2}[5]{%
+\newcommand{\twentyitembis}[5]{%
 	#1&\parbox[t]{0.83\textwidth}{%
 		\textbf{#2}%
 		\hfill%
