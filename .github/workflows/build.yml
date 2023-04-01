@@ -15,6 +15,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: resume.tex
+          latexmk_use_xelatex: true
           args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode -outdir=build"
           post_compile: find build ! -name 'resume.pdf' -type f -exec rm -f {} +
       - name: Deploy
